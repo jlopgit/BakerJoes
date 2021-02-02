@@ -1,0 +1,337 @@
+@font-face{
+
+	font-family: AG;
+	src: url(font/AGThatsANoFromMe.ttf);
+}
+
+@font-face{
+
+	font-family: Twister;
+	src: url(font/Twister.ttf);
+}
+
+@font-face{
+
+	font-family: Ants;
+	src: url(font/HelloAntsOnFire.ttf);
+}
+
+html, body{
+
+	height: 100%;
+	width: 100%;
+}
+
+body{
+
+	background-image: url(images/crinkleflat.PNG);
+	background-size: 80px;
+	margin: 0; /*remove whitespace around body*/
+	font-family: Ants;
+}
+
+@keyframes fadeIn{
+
+	0%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+
+.links a{
+
+	text-decoration: none;
+	color: white;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.links a:hover{
+
+	box-shadow: 0px 6px 3px -3px white;
+}
+
+.navbar{
+
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: black;
+	overflow: hidden;
+	animation: fadeIn ease 1s;
+}
+
+#nav-links{
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.navbar #logo{
+
+	height: 80px;
+	width: 80px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#nav-links a{
+
+	text-shadow: 0.5px 0 white;
+	letter-spacing: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.tooltip{
+
+	display: inline-block;
+	position: relative;
+}
+
+#nav-links .tooltiptext{
+
+	visibility: hidden;
+	background-color: white;
+	color: black;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	width: 150px;
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+	left: 0%;
+	margin-left: -60px;
+}
+
+#nav-links .tooltip:hover .tooltiptext{
+
+	visibility: visible;
+}
+
+#mid-node{
+
+	margin-top: 50px;
+	margin-bottom: 70px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	animation: fadeIn ease 2s;
+}
+
+#mid-node #announcement{
+
+	box-shadow: 0 4px 8px 0 black;
+	text-align: center;
+	background-color: #B85B5B;
+	color: white;
+	border-radius: 10px;
+	padding: 50px;
+	
+}
+
+#mid-node #announcement #site-title{
+
+	font-size: 50px;
+}
+
+#mid-node #announcement ul{
+
+	padding: 0;
+	list-style-type: none;
+}
+
+#mid-node #announcement ul li{
+
+	margin-bottom: 10px;
+	white-space: pre;
+}
+
+#mid-node #announcement table{
+
+	border-bottom: 2px solid grey;
+}
+
+#mid-node #announcement table #header-left{
+
+	text-align: left;
+}
+
+#mid-node #announcement table #header-right{
+
+	text-align: right;
+}
+
+#mid-node #announcement table img{
+
+	width: 70px;
+	height: 70px;
+}
+
+#mid-node #announcement table h1{
+
+	font-family: Twister;
+	font-size: 50px;
+	border-bottom: 2px solid grey;
+	display:inline-block;
+
+}
+
+#mid-node #announcement table #column-left{
+
+	padding-right: 10px;
+	text-align: left;
+}
+
+#mid-node #announcement table #column-right{
+
+	padding-left: 10px;
+	text-align: right;
+}
+
+#mid-node .items{
+
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+#mid-node .items .item-node{
+
+	margin-top: 30px;
+	width: 400px;
+	text-align: center;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 black;
+	border-radius: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	overflow: hidden;
+}
+
+
+#mid-node .items .item-node img{
+
+	width: 100%;
+}
+
+.footer{
+
+	background-color: black;
+	overflow: hidden; /*necessary when there are floating elements*/
+	padding-top: 20px;
+	padding-bottom: 20px;
+	/*position: fixed;
+	width: 100%;
+	bottom: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;*/
+	bottom: 0;
+}
+
+.footer #footer-icons{
+
+	float: left;
+	margin-left: 20px;
+}
+
+.footer #footer-sitename{
+
+	padding-top: 10px;
+	float: right;
+	margin-right: 30px;
+}
+
+.footer #footer-icons a{
+
+	margin: 10px;
+	font-size: 20px;
+}
+
+@media only screen and (max-width: 414px){
+
+	.navbar{ /*sticky navbar for smaller screens*/
+
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.navbar #logo{
+
+		height: 60px;
+		width: 60px;
+		margin-left: 5px;
+		margin-right: 5px;
+		order: -1; /*move icon to the left*/
+	}
+
+	#nav-links a{
+
+		letter-spacing: 0px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	#mid-node{
+
+		margin-top: 120px;
+	}
+
+	#mid-node #announcement{
+
+		
+		margin-right: 15px;
+		margin-left: 15px;
+		
+	}
+
+	#mid-node #announcement #site-title{
+
+		font-size: 40px;
+	}
+
+	#mid-node #announcement table #column-left{
+
+		padding-right: 0px;
+	}
+
+	#mid-node #announcement table #column-right{
+
+		padding-left: 0px;
+	}
+
+	#mid-node #announcement table h1{
+
+		font-size: 35px;
+	}
+
+
+	#mid-node .items .item-node{
+
+		
+		width: 350px;
+		text-align: center;
+		background-color: white;
+		box-shadow: 0 4px 8px 0 black;
+		border-radius: 10px;
+		margin-left: 5px;
+		margin-right: 5px;
+		overflow: hidden;
+	}
+}
+
+
+
